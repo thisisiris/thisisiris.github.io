@@ -1,0 +1,337 @@
+/*Master Styles*/
+body {
+    font-family: 'Varela Round', sans-serif;
+    margin: 0px;
+    height:100%;
+    background-color:#202020;
+}
+
+.coming-soon{
+    margin: 22%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+/*Menubar Styles*/
+.overall_menubar{
+    display: grid;
+    grid-template-rows: 5%;
+    grid-template-columns: 1fr;
+    background-color:#202020;
+    border-bottom: solid;
+    border-color:#bd8f34;
+    border-width: 8px;
+}
+
+.menubar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menubar_right{
+    top: 0px;
+    padding: 1%;
+}
+
+.menubar_left {
+    display: flex;
+    padding: 1.8%;
+    font-size: 120%;
+}
+
+.menubar > .menubar_left > div{
+    margin-right: 20px;
+}
+
+.menubar_link {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.menubar_link a {
+    color: #458075;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.menubar_link:hover {
+    border-bottom: 1px solid #458075;
+}
+
+.menubar_link a :hover {
+    color: #458075;
+}
+
+.active-menubar_link{
+    border-bottom: 1px solid #85fae4;
+}
+
+.active-menubar_link a{
+    color: #85fae4 !important;
+}
+
+@media (max-width:8.5in){
+    .overall_menubar{
+        display: flex;
+        grid-template-rows: 5%;
+        grid-template-columns: 1fr ;
+        background-color:#202020;
+        border-bottom: solid;
+        border-color:#bd8f34;
+        border-width: 8px;
+    }
+    .menubar_left{
+        display: none;
+    }
+
+    .menubar_right{
+        top: 0%;
+        padding-left: 50%;
+        padding-right: 50%;
+    }
+}
+
+/*Home Styles*/
+.home{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+
+.home_item{
+    position: relative;
+}
+
+.home_bkgrnd{
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0px;
+}
+
+.home_logo{
+    position: absolute;
+    left: 145px;
+    right: 145px;
+    bottom: -10px;
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.home_subtitle{
+    position: absolute;
+    top: 260px;
+    right: 200px;
+    left: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    text-align: justify;
+    font-family: Calibri;
+    font-size: large;
+
+    /*for pop-up wording*/
+    color: transparent;
+    transition: 1s;
+    font-weight: 600;
+}
+
+.home_item:hover .home_subtitle{
+    font-weight: 600;
+    color: rgb(62, 255, 197);
+    font-size: larger;
+}
+
+.home_bkgrnd-darken{
+    transition: 1s;
+    filter: brightness(40%);
+}
+
+/*Contact Me Styles*/
+.overall_contact-me{
+    display: grid;
+    margin-top: 0.%;
+    grid-template-columns: 1fr 0.5in [start] 7.5in [end] 0.1in 2in 1fr;
+    background-color: #f3ffff;
+    margin-left: 20%;
+    margin-right: 10%;
+}
+
+.overall_contact-me * {
+    grid-column: start/end;
+}
+
+.contact-me_main{
+    margin: 10px auto;
+    line-height: 1.6;
+    font-size: 100%;
+}
+
+.form_label{
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: left;
+    margin: 2%;
+}
+
+.form_control{
+    display: flex;
+    width: 95%;
+    justify-content: left;
+    align-items: top;
+    margin-top: -2%;
+    margin-left: 2%;
+    padding: 0px;
+}
+
+.btn{
+    display: flex;
+    width: 95%;
+    justify-content: left;
+    align-items: top;
+    margin-top: 2%;
+    margin-left: 2%;
+    padding: 0px;
+}
+
+.contact-me_social{
+    display: grid;
+    grid-template-columns: 1fr 7.5in 0.1in [start] 2in [end] 1fr;
+    justify-items: center;
+    
+}
+
+.contact-me_social h2{
+    margin-top: -165%;
+    margin-bottom: 170%;
+}
+
+.contact-me_social h3{
+    margin-top: -165%;
+    margin-bottom: 165%;
+}
+
+.contact-me_social * {
+    grid-column: start/end;
+}
+
+@media (max-width:8.5in){
+    .overall_contact-me{
+        grid-template-columns: 1fr 5% [start] 90% [end] 5% 1fr;
+        margin: 0%;
+    }
+    .contact-me_social{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        justify-items: stretch;
+    }
+    .contact-me_social h2{
+        margin-top: 10%;
+        margin-bottom: 0%;
+        margin-left: -500%;
+    }
+    .contact-me_social h3{
+        margin-top: 0%;
+        margin-bottom: 0%;
+        margin-left: -500%;
+    }
+}
+
+/*Projects Styles*/
+.overall_projects{
+    display: grid;
+    margin-top: 2%;
+    grid-template-columns: 1fr 3fr 1fr;
+    background-color: #f3ffff;
+    margin-left: 20%;
+    margin-right: 20%;
+    max-width: 1000px;
+    position: relative;
+    border-left: #f3ffff 10px;
+    border-width: 2px;
+}
+
+.project_item header{
+    font-weight: 700;
+    font-size: xx-large;
+    padding: 20px;
+    border-bottom: solid;
+    border-color:#458075;
+    border-width: 4px;
+}
+
+.project_item-slides{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 27px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    margin-right: 3.4%;
+    margin-left: 3.4%;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.project_item time{
+    font-style: oblique;
+    padding-top: 0px;
+    padding-left: 30px;
+}
+
+.project_item p{
+    font-weight: 400;
+    font-size: large;
+    padding: 20px;
+    padding-top: 0px;
+    padding-left: 40px;
+    line-height: 1.5;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}

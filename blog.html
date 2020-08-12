@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> THISIS.IRIS </title>
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="reset.css">
+        <link type="hidden" rel="stylesheet" href="debug.css">
+    </head>
+    <body>
+
+        <div class="overall_menubar">
+            <div class="menubar">
+
+                <div class="menubar_left">
+                    <div class="menubar_link">
+                        <a href="index.html">HOME</a>
+                    </div>
+
+                    <div class="menubar_link">
+                        <a href="summary.html">SUMMARY</a>
+                    </div>
+
+                    <div class="menubar_link">
+                        <a href="projects.html">PROJECTS</a>
+                    </div>
+
+                    <div class="menubar_link active-menubar_link">
+                        <a href="blog.html">BLOG</a>
+                    </div>
+
+                    <div class="menubar_link">
+                        <a href="contact me.html">CONTACT ME</a>
+                    </div>
+                </div>
+
+                <div class="menubar_right">
+                    <div class="menubar_brand">
+                        <div class="menubar_brand-logo">
+                            <img src="images/logo/main logo-white.PNG" width="150" height="40">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="overall_blog">
+            <img class="coming-soon" height="500" width="800" src="/images/logo/coming soon-white.png"/>
+        </div>
+
+    </body>
+    <script>
+        /* when user scrolls down, hide menubar.
+           when user scrolls up, show the menubar. */
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function(){
+            var currentScrollpos = window.pageYOffset;
+            if(prevScrollpos>currentScrollpos){
+                document.getElementById("overall_menubar").style.top = "0";
+            }
+            else{
+                document.getElementById("overall_menubar").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollpos;
+        }
+    </script>
+</html>

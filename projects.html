@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> THISIS.IRIS </title>
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="reset.css">
+        <link type="hidden" rel="stylesheet" href="debug.css">
+    </head>
+    <body>
+
+        <div class="overall_menubar">
+            <div class="menubar">
+
+                <div class="menubar_left">
+
+                    <div class="menubar_link">
+                        <a href="index.html">HOME</a>
+                    </div>
+
+                    <div class="menubar_link">
+                        <a href="summary.html">SUMMARY</a>
+                    </div>
+
+                    <div class="menubar_link active-menubar_link">
+                        <a href="projects.html">PROJECTS</a>
+                    </div>
+
+                    <div class="menubar_link">
+                        <a href="blog.html">BLOG</a>
+                    </div>
+
+                    <div class="menubar_link">
+                        <a href="contact me.html">CONTACT ME</a>
+                    </div>
+                </div>
+
+                <div class="menubar_right">
+                    <div class="menubar_brand">
+                        <div class="menubar_brand-logo">
+                            <img src="images/logo/main logo-white.PNG" width="150" height="40">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="overall_projects">
+            <div class="projects">
+                <div class="project_item">
+                    <header>Microcontroller Snacks Moderator</header>
+                    <div class="project_item-slides fade">
+                        <iframe height="500" width="800" src="https://www.youtube.com/embed/fDeO4g08dyo" frameborder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="project_item-slides fade">
+                        <iframe height="500" width="800" src="https://prezi.com/embed/7bmnlbu0sux3/" id="iframe_container" frameborder="0" 
+                        webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; 
+                        fullscreen">
+                        </iframe>
+                    </div>
+                    <div class="project_item-slides fade">
+                        <img height="500" width="800" src="/projects/microcontroller snacks mod_1.jpeg"/>
+                    </div>
+                    <div class="project_item-slides fade">
+                        <img height="500" width="800" src="/projects/microcontroller snacks mod_2.jpeg"/>
+                    </div>
+                    <div class="project_item-slides fade">
+                        <img height="500" width="800" src="/projects/microcontroller snacks mod_3.jpeg"/>
+                    </div>
+                    <div class="project_item-buttons">
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <time datetime="14-08-2018">AUG. 14, 2018</time>
+                    <p>
+                        During this project, we were tasked to incorporate a <em><strong>microcontroller chip (PIC18F4550)</strong></em>,
+                        to create a device that will help others. Through our ideation process, we came up 
+                        with various ideas.
+                    </p>
+                    <p>
+                        We finally decided to create a snack moderator since it had the ability to serve 
+                        a wide range of users and help more people. The project was completed over the duration
+                        of the module.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script>
+
+        /*slideshow*/
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("project_item-slides");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+        }
+
+        /* when user scrolls down, hide menubar.
+           when user scrolls up, show the menubar. */
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function(){
+            var currentScrollpos = window.pageYOffset;
+            if(prevScrollpos>currentScrollpos){
+                document.getElementById("overall_menubar").style.top = "0";
+            }
+            else{
+                document.getElementById("overall_menubar").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollpos;
+        }
+    </script>
+</html>

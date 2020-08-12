@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> THISIS.IRIS </title>
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="reset.css">
+        <link type="hidden" rel="stylesheet" href="debug.css">
+    </head>
+    <body>
+       
+        <div class="overall_menubar">
+            <div class="menubar">
+
+                <div class="menubar_left">
+                    <div class="menubar_link">
+                        <a href="index.html">HOME</a>
+                    </div>
+
+                    <div class="menubar_link">
+                        <a href="summary.html">SUMMARY</a>
+                    </div>
+
+                    <div class="menubar_link">
+                        <a href="projects.html">PROJECTS</a>
+                    </div>
+
+                    <div class="menubar_link">
+                        <a href="blog.html">BLOG</a>
+                    </div>
+
+                    <div class="menubar_link active-menubar_link">
+                        <a href="contact me.html">CONTACT ME</a>
+                    </div>
+                </div>
+
+                <div class="menubar_right">
+                    <div class="menubar_brand">
+                        <div class="menubar_brand-logo">
+                            <img src="images/logo/main logo-white.PNG" width="150" height="40">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="overall_contact-me">
+            <div class="contact-me_main">
+                <h1>Hey, I am Iris!</h1>
+                <p>
+                    <h2> You can reach me via email at <a href="mailto:taniris200010@gmail.com">taniris200010@gmail.com</a> or fill out the form below!</h2>
+                    <form action="https://mailthis.to/taniris200010@gmail.com" method="POST">
+                        <div class="form">
+                            <label class="form_label">Name:</label>
+                            <input type="text" class="form_control" name="Name" required/>
+                        </div>
+                        <div class="form">
+                            <label class="form_label">Your Email:</label>
+                            <input type="email" class="form_control" name="_replyto" required/>
+                        </div>
+                        <div class="form">
+                            <label class="form_label">Message:</label>
+                            <textarea class="form_control" name="Message" rows="3"></textarea>
+                        </div>
+                        <input type="hidden" name="_honeypot" value=""/>
+                        <button type="submit" class="btn">SEND</button>
+                    </form>
+                </p>
+            </div>
+            <div class="contact-me_social">
+                <h2>SOCIAL LINKS:</h2>
+
+                <h3>
+                    <div class="contact-me_social_item">
+                        <a href="https://www.linkedin.com/in/thisisiris/">linkedin</a>
+                    </div>
+                    <div class="contact-me_social_item">
+                        <a href="https://www.instagram.com/thisis.iris/">instagram</a>
+                    </div>
+                    <div class="contact-me_social_item">
+                        <a href="https://www.youtube.com/channel/UC2d7n2MFQ54lmmhkHTH-eag?view_as=subscriber">youtube</a>
+                    </div>
+                    <div class="contact-me_social_item">
+                        <a href="https://github.com/thisisiris">github</a>
+                    </div>
+                </h3>
+            </div>
+        </div>
+    </body>
+    <script>
+        /* when user scrolls down, hide menubar.
+           when user scrolls up, show the menubar. */
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function(){
+            var currentScrollpos = window.pageYOffset;
+            if(prevScrollpos>currentScrollpos){
+                document.getElementById("overall_menubar").style.top = "0";
+            }
+            else{
+                document.getElementById("overall_menubar").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollpos;
+        }
+    </script>
+</html>
